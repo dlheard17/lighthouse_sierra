@@ -1,28 +1,48 @@
 @import "tailwindcss";
+@plugin './hero.ts';
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --app-light: #ffffff;
+  --app-dark: #000000;
+  --app-primary: #000000;
+  --app-secondary: #ffffff;
+  --background: var(--app-light);
+  --foreground: var(--app-dark);
+  --text-light: var(--app-light);
+  --text-dark: var(--app-dark);
+  /* --primary: #86D05D;
+  --secondary: #173CA0; */
+  --primary: var(--app-primary);
+  --secondary: var(--app-secondary);
+  --heroui-danger: 8 90% 40%;
+  --heroui-success: 120 87% 40%;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.light {
+  --background: var(--app-light);
+  --foreground: var(--app-dark);
+  --text-light: var(--app-dark);
+  --text-dark: var(--app-light);
+  --background-rgb: 255 255 255;
 }
 
+
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground); /* optional: default text color */
+  min-height: 100%;
 }
 
 img {
@@ -33,3 +53,13 @@ img {
   -webkit-filter: none !important;
   filter: none !important;
 }
+
+input {
+  color: var(--primary);
+}
+
+.gradient-overlay:hover {
+  /* On hover of the container, make the overlay visible */
+  opacity: 0.2;
+}
+
