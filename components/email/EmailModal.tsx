@@ -19,7 +19,7 @@ export default function EmailModal({ isOpen, onOpenChange }: EmailModalProps) {
           <>
             <ModalHeader className="flex flex-col gap-1 text-black">Contact Us</ModalHeader>
             <ModalBody>
-              <SendEmailForm isLoading={isLoading} setLoading={setLoading} />
+              <SendEmailForm setLoading={setLoading} />
             </ModalBody>
             <ModalFooter>
               <Button color="danger" variant="light" onPress={onClose}>
