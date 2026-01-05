@@ -25,7 +25,13 @@ export default function EmailModal({ isOpen, onOpenChange }: EmailModalProps) {
               <Button color="danger" variant="light" onPress={onClose}>
                 Close
               </Button>
-              <Button type="submit" form="send-email-form" variant="solid" isLoading={isLoading}>
+              <Button
+                type="submit"
+                color="primary"
+                form="send-email-form"
+                variant="solid"
+                isLoading={isLoading}
+              >
                 Send
               </Button>
             </ModalFooter>
