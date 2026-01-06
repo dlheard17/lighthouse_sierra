@@ -28,6 +28,8 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-avenir-black: var(--font-avenir-black);
+  --font-avenir-medium: var(--font-avenir-medium);
+  --font-avenir-light: var(--font-avenir-light);
 }
 
 .light {
