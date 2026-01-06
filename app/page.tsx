@@ -8,7 +8,7 @@ import Footer from '@/components/Footer'
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col min-h-screen items-center justify-center font-sans">
+      <div className="flex flex-col min-h-screen items-center justify-center font-avenir-medium">
         <motion.h1
           className="flex items-center gap-2 text-5xl font-semibold leading-10 tracking-tight"
           initial={{ opacity: 0, y: 8 }}
@@ -32,7 +32,7 @@ export default function Home() {
             ease: 'easeIn',
           }}
         >
-          <span style={{ color: 'var(--app-primary' }}>Coming Soon!</span>
+          <span style={{ color: 'var(--app-primary' }}> Coming Soon! </span>
         </motion.h2>
         {/* <motion.h2
         className="flex items-center text-2xl tracking-tight text-black dark:text-zinc-50"

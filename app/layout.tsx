@@ -1,17 +1,22 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
+const avenirBlack = localFont({
+  src: '../assets/avenir-black-font.ttf',
+  variable: '--font-avenir-black',
 })
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+const avenirMedium = localFont({
+  src: '../assets/avenir-medium-font.ttf',
+  variable: '--font-avenir-medium',
+})
+
+const avenirLight = localFont({
+  src: '../assets/avenir-light-font.ttf',
+  variable: '--font-avenir-light',
 })
 
 export const metadata: Metadata = {
@@ -26,7 +31,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <body
+        className={`${avenirBlack.variable} ${avenirMedium.variable} ${avenirLight.variable} antialiased`}
+      >
+        {children}
+      </body>
       <Analytics />
       <SpeedInsights />
     </html>
