@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import ContactButton from '@/components/email/ContactButton'
 import Footer from '@/components/Footer'
@@ -19,11 +20,10 @@ export default function Home() {
             ease: 'easeOut',
           }}
         >
-          {/* <Image src="/logo.png" alt="Logo" width={100} height={40} priority /> */}
-          <span className="gradient-overlay">LightHouse Sierra</span>
+          <Image src="/logo-v0.svg" alt="Logo" width={600} height={0} priority />
         </motion.h1>
         <motion.h2
-          className="flex items-center text-2xl tracking-tight"
+          className="flex items-center text-2xl leading-10 tracking-tight"
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -32,9 +32,7 @@ export default function Home() {
             ease: 'easeIn',
           }}
         >
-          <span className="gradient-overlay" style={{ color: 'var(--text-dark' }}>
-            Coming Soon!
-          </span>
+          <span style={{ color: 'var(--app-primary' }}>Coming Soon!</span>
         </motion.h2>
         {/* <motion.h2
         className="flex items-center text-2xl tracking-tight text-black dark:text-zinc-50"

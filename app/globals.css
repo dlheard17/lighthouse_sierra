@@ -6,8 +6,8 @@
 :root {
   --app-light: #ffffff;
   --app-dark: #000000;
-  --app-primary: #000000;
-  --app-secondary: #ffffff;
+  --app-primary: #0a4440; /* Dark Green; RGB: 10, 68, 6 */
+  --app-secondary: #04c925; /* Bright Green; RGB: 112, 212, 75 */
   --background: var(--app-light);
   --foreground: var(--app-dark);
   --text-light: var(--app-light);
