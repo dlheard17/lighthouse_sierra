@@ -22,7 +22,7 @@ export default function EmailModal({ isOpen, onOpenChange }: EmailModalProps) {
               <SendEmailForm setLoading={setLoading} />
             </ModalBody>
             <ModalFooter>
-              <Button color="danger" variant="light" onPress={onClose}>
+              <Button color="primary" variant="light" onPress={onClose}>
                 Close
               </Button>
               <Button
