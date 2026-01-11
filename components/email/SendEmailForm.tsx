@@ -53,8 +53,7 @@ export default function SendEmailForm({ setLoading }: EmailFormProps) {
         placeholder="Enter your email"
         type="email"
         classNames={{
-          input: 'text-black dark:text-black',
-          label: 'text-black dark:text-black',
+          input: 'text-primary dark:text-primary',
         }}
       />
       <Textarea
@@ -72,7 +71,7 @@ export default function SendEmailForm({ setLoading }: EmailFormProps) {
           }
         }}
         classNames={{
-          input: 'text-black caret-black dark:caret-black',
+          input: 'text-primary caret-black dark:caret-black',
         }}
       />
       {success && <p className="text-sm text-green-600">Email sent!</p>}

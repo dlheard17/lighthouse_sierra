@@ -51,6 +51,7 @@ export default function NewsletterSignup() {
             base: 'flex-1 min-w-0',
             mainWrapper: 'flex-1 min-w-0',
             inputWrapper: 'w-full',
+            input: 'text-primary dark:text-primary',
           }}
         />
 
