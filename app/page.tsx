@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import ContactButton from '@/components/email/ContactButton'
 import Footer from '@/components/Footer'
+import NewsletterSignup from '@/components/newsletter/NewsletterSignup'
 
 export default function Home() {
   return (
@@ -55,7 +56,10 @@ export default function Home() {
             delay: 1.3,
           }}
         >
-          <ContactButton />
+          <div className="flex flex-col items-center gap-8 tracking-50">
+            <ContactButton />
+            <NewsletterSignup />
+          </div>
         </motion.h2>
       </div>
       <Footer />
